@@ -17,7 +17,7 @@ Criação da topologia considerando o endereço MAC padronizado, largura de band
 
 **Comando utilizado:**
 ```bash
-sudo mn --topo linear,6 --link tc,bw=25
+sudo mn --topo=linear,6 --link tc,bw=25 --mac
 ````
 ![Primeiro Ponto](Primeiro_Ponto.png)
 
