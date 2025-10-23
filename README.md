@@ -2,7 +2,7 @@
 
 ### 🧑‍🏫 Professor: Samuel Beraldi Mafra
 ### 📘 Autor: Tiago Augusto Carvalho
-### 📆 Disciplina: C115 — Conceitos e tecnologias para dispositivos
+### 📆 Disciplina: C115 — Conceitos e tecnologias para dispositivos conectados
 ### 💻 Ferramenta: Mininet
 
 
