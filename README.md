@@ -1,7 +1,8 @@
 # 🧩 C115-Works
 
+### 🧑‍🏫 Professor: Samuel Beraldi Mafra
 ### 📘 Autor: Tiago Augusto Carvalho
-### 📆 Disciplina: C115 — Redes de Computadores
+### 📆 Disciplina: C115 — Conceitos e tecnologias para dispositivos
 ### 💻 Ferramenta: Mininet
 
 
