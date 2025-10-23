@@ -1,6 +1,6 @@
-📘 Autor: Tiago Augusto Carvalho
-📆 Disciplina: C115 — Redes de Computadores
-💻 Ferramenta: Mininet
+#📘 Autor: Tiago Augusto Carvalho
+#📆 Disciplina: C115 — Redes de Computadores
+#💻 Ferramenta: Mininet
 
 # 🧩 C115-Works
 
@@ -62,7 +62,7 @@ h2 iperf -c h1 -p 5555 -t 15 -i 1
 ![Quato_Ponto](Quarto_Ponto.png)
 
 
-## 🧠 Resumo dos Comandos
+🧠 Resumo dos Comandos
 ### Para referência rápida, seguem todos os comandos utilizados no trabalho:
 
 **Comando utilizado:**
