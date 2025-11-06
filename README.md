@@ -46,18 +46,20 @@ sh ovs-ofctl show s1
 
 
 ## 🟣 Quarto Ponto
-### Testes de desempenho com iperf
-
-**Descrição:**  
-Configuração do host 1 na porta 5555 como servidor TCP e o host 2 como cliente, executando testes de iperf durante 15 segundos, com relatórios por segundo.
+### Execute testes de ping entre os diferentes nós, mostre os pacotes chegando nos nós com uso do comando tcpdump.
 
 **Comando utilizado:**
 ```bash
-xterm h1 h2
-h1 iperf -s -p 5555 &
-h2 iperf -c h1 -p 5555 -t 15 -i 1
+pingall
+xterm h1
+hl ping -c 5 h2
+sudo topdump - h1-eth0
 ````
-![Quato_Ponto](Quarto_Ponto.png)
+![Quato_Ponto](1(D)_primeiroprint.png)
+![Quato_Ponto](1(D)_segundoprint.png)
+![Quato_Ponto](1(D)_terceiroprint.png)
+
+
 
 
 🧠 Resumo dos Comandos
