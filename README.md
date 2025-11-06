@@ -1,4 +1,4 @@
-# 🧩 C115-Works
+# 🧩 C115-Works - TRABALHO FINAL - QUESTÃO !
 
 ### 🧑‍🏫 Professor: Samuel Beraldi Mafra
 ### 📘 Autor: Tiago Augusto Carvalho
@@ -6,21 +6,21 @@
 ### 💻 Ferramenta: Mininet
 
 
-Repositório contendo o trabalho da disciplina **C115**, desenvolvido em **Mininet**, utilizando linha de comando para criar e testar uma topologia linear com 6 switches.
+Branch contendo o trabalho final da disciplina **C115**, desenvolvido em **Mininet**, utilizando linha de comando para criar e testar uma topologia linear com 6 switches.
 
 ---
 
 ## 🟣 Primeiro Ponto
-### Criação da topologia linear com 6 switches
+### Criação da topologia de árvore de profundidade 3 e ramificação cinco
 
 **Descrição:**  
-Criação da topologia considerando o endereço MAC padronizado, largura de banda de 25 Mbps e o controlador padrão do Mininet (sem necessidade de especificar o tipo de controlador).
+Com uso de linha de comando padrão do Mininet, crie a topologia considerando o endereço MAC padronizado, larguras de banda bw de 30 Mbps e controlador do Mininet (não precisa especificar).
 
 **Comando utilizado:**
 ```bash
-sudo mn --topo=linear,6 --link tc,bw=25 --mac
+sudo mn --topo tree,depth=3,fanout=5 --link=tc,bw=30v --mac
 ````
-![Primeiro Ponto](Primeiro_Ponto.png)
+![Primeiro Ponto](1(a)_Final)
 
 
 ## 🟣 Segundo Ponto
