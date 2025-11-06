@@ -52,13 +52,33 @@ sh ovs-ofctl show s1
 ```bash
 pingall
 xterm h1
-hl ping -c 5 h2
 sudo topdump - h1-eth0
+hl ping -c 5 h2
 ````
 ![Quato_Ponto](1(D)_primeiroprint.png)
 ![Quato_Ponto](1(D)_segundoprint.png)
 ![Quato_Ponto](1(D)_terceiroprint.png)
 
+## 🟣 Quinto Ponto
+**Descrição:**  
+Especifique que o host 1 na porta 5555 vai ser umservidor TCP e o host 2 um cliente e execute testes deiperf, considere um relatório por segundo com teste de20 segundos. Faça os testes para larguras de banda bw
+de 30 e 40 Mbps (Necessário reconstruir a topologiapara os outros valores).
+
+**Comandos utilizados:**
+```bash
+xterm h1 h2
+iperf -s -p 5555
+iperf -c 10.0.0.1 -p 5555 -t 20 -i 1
+
+//criando nova topologia depois de limpar o cache
+sudo mn -- topo tree, depth=3, fanout=5 -- link=tc, bw=40 -- mac
+xterm h1 h2
+iperf -s -p 5555
+iperf -c 10.0.0.1 -p 5555 -t 20 -i 1
+````
+![Quinto_Ponto](1(E)_primeiroprint.png)
+![Quinto_Ponto](1(E)_cofignewTOPO40.png)
+![Quinto_Ponto](1(E)_ultimo.png)
 
 
 
@@ -68,19 +88,22 @@ sudo topdump - h1-eth0
 **Comando utilizado:**
 ```bash
 # Criação da topologia linear com 6 switches
-sudo mn --topo linear,6 --link tc,bw=25
+sudo mn -- topo tree, depth=3, fanout=5 -- link=tc, bw=30 -- mac
+sudo mn -- topo tree, depth=3, fanout=5 -- link=tc, bw=40 -- mac
 
 # Inspeção de nós, conexões e interfaces
 nodes
 net
 dump
+hl ifconfig
+sh ovs-ofctl show s1
 
 # Testes de conectividade entre os nós
 pingall
 
 # Testes de desempenho com iperf
-h1 iperf -s -p 5555 &
-h2 iperf -c h1 -p 5555 -t 15 -i 1
+iperf -s -p 5555
+iperf -c 10.0.0.1 -p 5555 -t 20 -i 1
 
 # Encerrando topologia e limpando cache
 sudo mn -c
