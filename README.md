@@ -18,9 +18,9 @@ Com uso de linha de comando padrão do Mininet, crie a topologia considerando o 
 
 **Comando utilizado:**
 ```bash
-sudo mn --topo tree,depth=3,fanout=5 --link=tc,bw=30v --mac
+sudo mn --topo tree,depth=3,fanout=5 --link tc,bw=30v --mac
 ````
-![Primeiro Ponto](1(a)_Final)
+![Primeiro Ponto](1(a)_Final.png)
 
 
 ## 🟣 Segundo Ponto
