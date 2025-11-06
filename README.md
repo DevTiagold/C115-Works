@@ -68,7 +68,10 @@ ping -c 3  10.0.0.5
 **Comando utilizado:**
 ```bash
 # Criação da topologia linear com 6 switches
-sudo mn --topo linear,6 --link tc,bw=25
+cd ~/mininet-topos \\previamente criada
+nano topologia_customizada.py \\abre o terminal onde escrevo o código de topologia
+sudo mn --custom topologia_customizada.py --topo topologiacustomizada --controller=default
+
 
 # Inspeção de nós, conexões e interfaces
 nodes
@@ -77,10 +80,7 @@ dump
 
 # Testes de conectividade entre os nós
 pingall
-
-# Testes de desempenho com iperf
-h1 iperf -s -p 5555 &
-h2 iperf -c h1 -p 5555 -t 15 -i 1
+xterm h1
 
 # Encerrando topologia e limpando cache
 sudo mn -c
