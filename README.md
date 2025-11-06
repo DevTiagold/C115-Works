@@ -40,16 +40,9 @@ sh ovs-ofctl show s1
 
 
 ## 🟣 Terceiro Ponto
-### Testes de ping entre os diferentes nós
+### Crie um desenho ilustrativo da topologia com todas asinformações obtidas no item anterior.
 
-**Descrição:**  
-Executar testes de conectividade entre todos os nós da topologia para garantir comunicação completa entre os hosts.
-
-**Comando utilizado:**
-```bash
-pingall
-````
-![Terceiro_Ponto](Terceiro_Ponto.png)
+![Terceiro_Ponto](1(C)_desenho.png)
 
 
 ## 🟣 Quarto Ponto
