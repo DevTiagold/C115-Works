@@ -1,4 +1,4 @@
-# 🧩 C115-Works
+# 🧩 C115-Works - Trabalho Final - Questão 2
 
 ### 🧑‍🏫 Professor: Samuel Beraldi Mafra
 ### 📘 Autor: Tiago Augusto Carvalho
@@ -6,21 +6,26 @@
 ### 💻 Ferramenta: Mininet
 
 
-Repositório contendo o trabalho da disciplina **C115**, desenvolvido em **Mininet**, utilizando linha de comando para criar e testar uma topologia linear com 6 switches.
+Branch contendo o trabalho final da disciplina C115(questão 2), desenvolvido em Mininet e python, utilizando linha de comando para criar e testar uma topologia linear com 6 switches.
 
 ---
 
 ## 🟣 Primeiro Ponto
-### Criação da topologia linear com 6 switches
+### Criação da topologia customizada
 
 **Descrição:**  
-Criação da topologia considerando o endereço MAC padronizado, largura de banda de 25 Mbps e o controlador padrão do Mininet (sem necessidade de especificar o tipo de controlador).
-
+Com uso de linha de comando padrão do Mininet, crie atopologia customizada considerando o endereço MAC padronizado e controlador manual;
+ 
 **Comando utilizado:**
 ```bash
-sudo mn --topo=linear,6 --link tc,bw=25 --mac
+cd ~/mininet-topos \\previamente criada
+nano topologia_customizada.py \\abre o terminal onde escrevo o código de topologia
+sudo mn --custom topologia_customizada.py --topo topologiacustomizada --controller=default
+
 ````
-![Primeiro Ponto](Primeiro_Ponto.png)
+![Primeiro Ponto](2(A)_print1acessandopasta.png)
+![Primeiro Ponto](2(A)_print2criandocódigopython.png)
+![Primeiro Ponto](2(A)_print3criandoatopologia.png)
 
 
 ## 🟣 Segundo Ponto
@@ -33,10 +38,15 @@ Listar e inspecionar as informações dos nós, conexões e interfaces da topolo
 ```bash
 dump
 ````
-![Segundo_Ponto](Segundo_Ponto.png)
-
+![Segundo_Ponto](2(B)_print1inspecionando.png)
 
 ## 🟣 Terceiro Ponto
+### Crie um desenho ilustrativo da topologia com todas as
+informações obtidas no item anterior
+
+![Terceiro_Ponto](2(C)_print1Desenho.png)
+
+## 🟣 Quarto Ponto
 ### Testes de ping entre os diferentes nós
 
 **Descrição:**  
@@ -45,23 +55,11 @@ Executar testes de conectividade entre todos os nós da topologia para garantir 
 **Comando utilizado:**
 ```bash
 pingall
+xterm h1
+ping -c 3  10.0.0.5
 ````
-![Terceiro_Ponto](Terceiro_Ponto.png)
-
-
-## 🟣 Quarto Ponto
-### Testes de desempenho com iperf
-
-**Descrição:**  
-Configuração do host 1 na porta 5555 como servidor TCP e o host 2 como cliente, executando testes de iperf durante 15 segundos, com relatórios por segundo.
-
-**Comando utilizado:**
-```bash
-xterm h1 h2
-h1 iperf -s -p 5555 &
-h2 iperf -c h1 -p 5555 -t 15 -i 1
-````
-![Quato_Ponto](Quarto_Ponto.png)
+![Quarto_Ponto](2(D)_testePINGALL.png)
+![Quarto_Ponto](2(D)_testepingh1parah5.png)
 
 
 🧠 Resumo dos Comandos
@@ -87,16 +85,6 @@ h2 iperf -c h1 -p 5555 -t 15 -i 1
 # Encerrando topologia e limpando cache
 sudo mn -c
 ````
-
-##✅ Conclusão
-### Todas as etapas do trabalho foram executadas com sucesso, contemplando:
-
-**Descrição:  
-.Criação da topologia linear no Mininet;
-.Inspeção das interfaces e conexões entre nós;
-.Testes de conectividade e desempenho entre hosts;
-.Limpeza final do ambiente para novas execuções.**
-
 
 
 
