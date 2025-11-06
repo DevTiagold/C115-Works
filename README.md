@@ -1,4 +1,4 @@
-# 🧩 C115-Works - TRABALHO FINAL - QUESTÃO !
+# 🧩 C115-Works - TRABALHO FINAL - QUESTÃO 1
 
 ### 🧑‍🏫 Professor: Samuel Beraldi Mafra
 ### 📘 Autor: Tiago Augusto Carvalho
@@ -6,7 +6,7 @@
 ### 💻 Ferramenta: Mininet
 
 
-Branch contendo o trabalho final da disciplina **C115**, desenvolvido em **Mininet**, utilizando linha de comando para criar e testar uma topologia linear com 6 switches.
+Branch contendo o trabalho final(questão 1) da disciplina **C115**, desenvolvido em **Mininet**, utilizando linha de comando para criar e testar uma topologia linear com 6 switches.
 
 ---
 
