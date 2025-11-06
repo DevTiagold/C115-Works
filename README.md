@@ -24,16 +24,20 @@ sudo mn --topo tree,depth=3,fanout=5 --link tc,bw=30v --mac
 
 
 ## 🟣 Segundo Ponto
-### Inspeção de informações das interfaces, endereços MAC, IP e portas
+### Inspecione informações das interfaces, endereços
+MAC, IP e portas através de linhas de comando;
 
 **Descrição:**  
 Listar e inspecionar as informações dos nós, conexões e interfaces da topologia criada, através das linhas de comando.
 
-**Comando utilizado:**
+**Comandos utilizados:**
 ```bash
-dump
+hl ifconfig
+sh ovs-ofctl show s1
 ````
-![Segundo_Ponto](Segundo_Ponto.png)
+![Segundo_Ponto](1(B)_primeiroprint.png)
+![Segundo_Ponto](1(B)_segundoprint.png)
+
 
 
 ## 🟣 Terceiro Ponto
