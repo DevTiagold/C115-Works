@@ -24,8 +24,7 @@ sudo mn --topo tree,depth=3,fanout=5 --link tc,bw=30v --mac
 
 
 ## 🟣 Segundo Ponto
-### Inspecione informações das interfaces, endereços
-MAC, IP e portas através de linhas de comando;
+### Inspecione informações das interfaces
 
 **Descrição:**  
 Listar e inspecionar as informações dos nós, conexões e interfaces da topologia criada, através das linhas de comando.
