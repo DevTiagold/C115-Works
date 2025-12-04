@@ -1,0 +1,6 @@
+# Ignorar todas as imagens PNG
+*.png
+*.md
+
+# Caso queira ignorar também PNGs em subpastas (opcional – já é incluído pelo padrão acima)
+**/*.png
